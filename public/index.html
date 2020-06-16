@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="renderStudent()">
+<body onload="renderStudent()" onkeypress="pressSave(event)">
 <div class="container">
     <h2>ADD STUDENT</h2>
     <input type='hidden' id="index">
@@ -33,7 +33,7 @@
     <input id="dob" class="input" type="date" placeholder="dob">
     <div class="error" id="errorDob"></div>
 
-    <button id="saveBtn" onclick="saveStudent()">Save Student</button>
+    <button id="saveBtn" onclick="saveStudent()" style="display: block">Save Student</button>
     <button id="changeBtn" onclick="changeStudent()">Update Student</button>
 </div>
 

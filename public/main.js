@@ -1,5 +1,10 @@
 function resetForm() {
-    document.querySelector('input[name = gender]:checked').checked = false
+    if (document.getElementById('male').checked) {
+        document.getElementById('male').checked = false
+    }
+    if (document.getElementById('female').checked) {
+        document.getElementById('female').checked = false
+    }
     document.getElementById('name').value = ''
     document.getElementById('email').value = ''
     document.getElementById('phone').value = ''
@@ -108,7 +113,6 @@ function deleteStudent(key) {
     renderStudent()
 }
 
-
 function editStudent(index) {
     let listStudents = localStorage.getItem('FE4') ? JSON.parse(localStorage.getItem('FE4')) : [];
     document.getElementById('name').value = listStudents[index].name
@@ -144,6 +148,20 @@ function changeStudent() {
     resetForm()
     document.getElementById('changeBtn').style.display = 'none'
     document.getElementById('saveBtn').style.display = 'block'
+}
+
+function pressSave(event) {
+    let x = event.which
+    if (x === 13) {
+        if (document.getElementById('saveBtn').style.display === 'block') {
+            document.getElementById('saveBtn').onclick(function () {
+            })
+        }
+        if (document.getElementById('changeBtn').style.display === 'block') {
+            document.getElementById('changeBtn').onclick(function () {
+            })
+        }
+    }
 }
 
 

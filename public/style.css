@@ -48,7 +48,6 @@ input::placeholder {
     margin-top: 20px;
     cursor: pointer;
     color: #fff;
-    display: block;
 }
 
 h2 {
@@ -94,5 +93,4 @@ table tr:hover {
 
 #saveBtn {
     background: #00b9ff;
-
 }
