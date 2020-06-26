@@ -1,0 +1,35 @@
+<style>
+    div {
+        background: #f00;
+        margin-top: 15px;
+        width: 300px;
+        height: 150px;
+        color: #fff;
+        font-size: 40px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+</style>
+
+<button style="color: red" onclick="showTab(this, 1)">tab 1</button>
+<button onclick="showTab(this, 2)">tab 2</button>
+<button onclick="showTab(this, 3)">tab 3</button>
+
+<div id="content-1">Content 1</div>
+<div style="display: none" id="content-2">Content 2</div>
+<div style="display: none" id="content-3">Content 3</div>
+
+<script>
+    function showTab(element, id) {
+        let divElement = document.getElementsByTagName('div')
+        for (let i = 0; i < divElement.length; i++) {
+            divElement[i].style.display = 'none'
+        }
+        let colorButton = document.getElementsByTagName('button')
+        for (let x = 0; x < colorButton.length; x++) {
+            colorButton[x].style.color = 'black'
+        }
+        document.getElementById(`content-${id}`).style.display = 'block'
+        element.style.color = 'red'
+    }
+</script>
