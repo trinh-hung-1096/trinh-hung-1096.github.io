@@ -1,31 +1,13 @@
-<select name="" id="city" onchange="chooseCity(this)">
-    <option value="">-- choose city --</option>
-    <option value="01">ha noi</option>
-    <option value="04">da nang</option>
-    <option value="02">ho chi minh</option>
-    <option value="61">ca mau</option>
-</select>
-<select name="" id="district">
-    <option value="">-- choose district --</option>
-</select>
-<script>
-    function chooseCity(value) {
-        let city = document.getElementById('city')
-        let valueCity = city.value
-        let district = {
-            city01: ['thanh xuan', 'ba dinh', 'dong da', 'hoan kiem'],
-            city04: ['hai chau', 'thanh khe', 'son tra', 'hoang sa'],
-            city02: ['quan 1', 'thu duc', 'binh thanh', 'cu chi'],
-            city61: ['thoi binh', 'u minh', 'cai nuoc', 'phu tan'],
-        }
-
-        let renderDistrict = district[`city${valueCity}`]
-        let item = `<option value="">-- choose district --</option>`
-        renderDistrict.forEach((value) => {
-            item += `<option value="${value}">${value}</option>`
-        })
-        document.getElementById('district').innerHTML = item;
-        let reset = city[0]
-        reset.style.display = 'none'
-    }
-</script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+abc
+</body>
+</html>
