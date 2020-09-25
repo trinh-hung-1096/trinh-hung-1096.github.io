@@ -182,8 +182,9 @@ body {
 
                     border-bottom: 1px dashed #ccc;
                     display: inline-block;
+                    border-top: 1px dashed #ccc;
                     width: 100%;
-                    padding-bottom: 10px;
+                    padding: 10px 0;
                     line-height: 28px;
 
                     span {
@@ -191,11 +192,7 @@ body {
                         font-size: 18px;
                     }
 
-                    &:last-child {
-                        padding-top: 10px;
-                        padding-bottom: 0;
-                        border-bottom: 0;
-                    }
+                    
                 }
             }
         }
