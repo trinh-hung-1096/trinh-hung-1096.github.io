@@ -51,7 +51,7 @@ body {
         .logo {
             text-align: center;
             text-transform: uppercase;
-            font-family: 'Baumans', cursive;
+            font-family: 'Anton', cursive;
             font-size: 80px;
             color: #fff;
             text-shadow: 3px 3px 5px #171717;
@@ -60,6 +60,7 @@ body {
             animation-duration: 8s;
             animation-timing-function: ease;
             animation-iteration-count: 1;
+            letter-spacing: 5px;
         }
 
         .slogan {
@@ -192,7 +193,7 @@ body {
                         font-size: 18px;
                     }
 
-                    
+
                 }
             }
         }
