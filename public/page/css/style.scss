@@ -7,12 +7,6 @@
 
 $colorPrimary: #4fb68d;
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -28,6 +22,10 @@ a {
     }
 }
 
+input, button {
+    font-family: inherit;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -39,6 +37,12 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
     line-height: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .row-align {
@@ -104,7 +108,7 @@ header {
     transition: all .4s ease;
 
     .logo {
-        font-family: 'Baumans', cursive;
+        font-family: 'Anton', sans-serif;
         font-size: 40px;
 
         span {
@@ -166,6 +170,8 @@ header {
 }
 
 .banner {
+    transition: all .5s ease;
+
     .__banner {
         position: relative;
 
@@ -338,6 +344,10 @@ header {
                 margin-top: 10px;
                 font-weight: 600;
                 font-size: 16px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
 
             h2 {
@@ -500,10 +510,12 @@ header {
         .image {
             width: 120px;
             margin-left: 20px;
-            z-index: 9;
+            z-index: 0;
 
             img {
                 transition: all 1s ease;
+                box-shadow: 0 0 5px 0px #000;
+                border-radius: 50%;
             }
         }
 
@@ -555,7 +567,7 @@ footer {
 
             .logo {
                 margin-top: 30px;
-                font-family: 'Baumans', cursive;
+                font-family: 'Anton', sans-serif;
                 font-size: 40px;
 
                 span {
@@ -657,3 +669,146 @@ footer {
         }
     }
 }
+
+.main-menu-mobile {
+    position: fixed;
+    bottom: 0;
+    background: $colorPrimary;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-top: 3px solid #fff;
+    display: none;
+
+    .__main-menu-mobile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .item {
+            border-left: 1px solid #d5ede2;
+
+            &:first-child {
+                border-left: 0;
+            }
+
+            button {
+                color: #d5ede2;
+                background: none;
+                border: none;
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.contentModalMobile {
+    padding: 30px 15px;
+    text-align: center;
+
+    ul {
+        li {
+            display: inline-block;
+            width: 100%;
+            font-family: 'Anton', sans-serif;
+            font-size: 25px;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        display: none;
+    }
+    .header-line {
+        .logo {
+            text-align: center;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .call-us {
+            display: none;
+        }
+
+        .search {
+            margin-top: 10px;
+        }
+    }
+    .banner {
+        margin-top: 0 !important;
+
+        .item {
+            .__banner {
+                color: #fff;
+
+                img {
+                    height: 50vh;
+                    object-fit: cover;
+                    filter: brightness(0.5);
+                }
+            }
+        }
+    }
+    .fixed-menu {
+        position: inherit;
+    }
+    .standard {
+        .item {
+            margin-bottom: 20px;
+        }
+    }
+    .intro-content .image, .intro-content .info, footer .__footer .left, footer .__footer .right {
+        width: 100%;
+    }
+    .intro-content, footer .__footer {
+        flex-wrap: wrap;
+    }
+    .ads-main .item img {
+        margin: auto;
+    }
+    .rating {
+        grid-template-columns: repeat(1, 1fr);
+        background: url(../images/bg_testi.jpg) fixed no-repeat;
+        background-size: cover;
+    }
+    footer {
+        padding-bottom: 80px;
+    }
+    .main-menu-mobile {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
