@@ -192,7 +192,7 @@ img {
 .logo-mobile {
     display: none;
     text-align: center;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton', 'Montserrat', sans-serif;
     background: #272727;
     color: #e06c75;
     font-size: 30px;
