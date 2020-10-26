@@ -223,7 +223,7 @@ img {
         display: none;
     }
 
-    .left, .right {
+    .right, .content {
         padding-bottom: 50px;
     }
 
